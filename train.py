@@ -8,10 +8,9 @@ EPOCHS = 50
 IMG_SIZE = 640
 BATCH_SIZE = 256
 TRAINED_MODEL_PATH = 'runs/detect/train/weights/best.pt'
+SAVE_WEIGHT = 'runs/detect/train'
 
 # Verify paths
-
-
 def check_path(path):
     if not os.path.exists(path):
         print(f"Path does not exist: {path}")
@@ -36,7 +35,7 @@ try:
                 epochs=EPOCHS,
                 imgsz=IMG_SIZE,
                 batch=BATCH_SIZE,
-                save_dir='runs/detect/train'
+                save_dir='SAVE_WEIGHT'
                 )
 except Exception as e:
     print(f"An error occurred during training: {e}")
